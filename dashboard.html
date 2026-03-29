@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/home">Analyze</a>
+    <a href="/history">History</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<h1 style="text-align:center;">📊 Dashboard</h1>
+
+<div class="dashboard">
+
+    <div class="card">
+        <h3>Total Students</h3>
+        <p>{{ total }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Average Score</h3>
+        <p>{{ avg }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Top Student</h3>
+        <p>{{ top[0] if top else 'N/A' }}</p>
+    </div>
+
+</div>
+
+<br>
+
+<div style="text-align:center;">
+    <a href="/home"><button>Analyze Student</button></a>
+    <a href="/show_result"><button>Check Result</button></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h1 style="text-align:center;">📊 Student Analyzer</h1>
+
+<div style="display:flex; justify-content:center; gap:40px;">
+
+    <!-- 🔹 ANALYZE FORM -->
+    <form action="/analyze" method="post" class="card">
+        <h3>Analyze Student</h3>
+
+        <input type="text" name="roll_no" placeholder="Roll Number" required><br>
+        <input type="text" name="name" placeholder="Name" required><br>
+
+        <input type="number" name="math" placeholder="Math" required><br>
+        <input type="number" name="science" placeholder="Science" required><br>
+        <input type="number" name="english" placeholder="English" required><br>
+
+        <button type="submit">Analyze</button>
+    </form>
+
+    <!-- 🔹 SHOW RESULT BUTTON -->
+    <div class="card" style="display:flex; flex-direction:column; justify-content:center;">
+        <h3>Check Result</h3>
+        <a href="/show_result">
+            <button>Show Result</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

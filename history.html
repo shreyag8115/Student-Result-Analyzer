@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/home">Home</a>
+    <a href="/history">History</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<h1 style="text-align:center;">📊 Student History</h1>
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Math</th>
+    <th>Science</th>
+    <th>English</th>
+    <th>Average</th>
+    <th>Performance</th>
+</tr>
+
+{% for row in data %}
+<tr>
+    <td>{{row[1]}}</td>
+    <td>{{row[2]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[4]}}</td>
+    <td>{{row[5]}}</td>
+    <td>{{row[6]}}</td>
+</tr>
+<td>
+    <a href="/delete/{{row[0]}}" style="color:red;">Delete</a>
+</td>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="navbar">
+    <a href="/history">History</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<h1>📊 Student Performance Dashboard</h1>
+
+<div class="card">
+    <p><b>Name:</b> {{name}}</p>
+    <p><b>Average:</b> {{avg}}</p>
+    <p><b>Highest:</b> {{highest}}</p>
+    <p><b>Weakest:</b> {{weakest}}</p>
+    <p><b>Performance:</b> {{performance}}</p>
+</div>
+
+<div class="card">
+    <h3>💡 Suggestion</h3>
+    <p>{{suggestion}}</p>
+</div>
+
+<div class="card">
+    <img src="{{ url_for('static', filename='graph.png') }}">
+</div>
+
+</body>
+</html>
